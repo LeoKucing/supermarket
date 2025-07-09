@@ -1,0 +1,22 @@
+{
+  "produk": [
+    {
+      "id": "1",
+      "nama": "Indomie Goreng",
+      "harga": 3000
+    },
+    {
+      "id": "2",
+      "nama": "Teh Botol",
+      "harga": 5000
+    }
+  ],
+  "transaksi": [
+    {
+      "id": "5d8a",
+      "tanggal": "2025-07-09",
+      "total": 8000
+    }
+  ],
+  "laporan": []
+}
