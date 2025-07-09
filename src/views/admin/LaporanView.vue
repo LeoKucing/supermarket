@@ -64,13 +64,13 @@ onMounted(() => {
 })
 
 async function loadLaporan() {
-  const res = await fetch('http://localhost:3000/laporan')
+  const res = await fetch('https://melodious-bravery-production.up.railway.app/api/laporan')
   laporan.value = await res.json()
 }
 
 // Tambah laporan
 async function tambahLaporan() {
-  await fetch('http://localhost:3000/laporan', {
+  await fetch('https://melodious-bravery-production.up.railway.app/api/laporan', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
@@ -88,7 +88,7 @@ async function tambahLaporan() {
 
 // Hapus laporan
 async function hapusLaporan(id) {
-  await fetch(`http://localhost:3000/laporan/${id}`, {
+  await fetch(`https://melodious-bravery-production.up.railway.app/api/laporan/${id}`, {
     method: 'DELETE'
   })
   loadLaporan()
@@ -102,7 +102,7 @@ function showEditModal(lapor) {
 
 // Simpan hasil edit
 async function simpanEdit() {
-  await fetch(`http://localhost:3000/laporan/${editData.value.id}`, {
+  await fetch(`https://melodious-bravery-production.up.railway.app/api/laporan/${editData.value.id}`, {
     method: 'PUT',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(editData.value)

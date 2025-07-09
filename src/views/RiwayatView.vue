@@ -23,12 +23,12 @@ import Navbar from '@/components/Navbar.vue'
 const riwayat = ref([])
 
 async function loadRiwayat() {
-  const res = await fetch('http://localhost:3000/transaksi')
+  const res = await fetch('https://melodious-bravery-production.up.railway.app/api/transaksi')
   riwayat.value = await res.json()
 }
 
 async function hapusTransaksi(id) {
-  await fetch(`http://localhost:3000/transaksi/${id}`, {
+  await fetch(`https://melodious-bravery-production.up.railway.app/api/transaksi/${id}`, {
     method: 'DELETE'
   })
   loadRiwayat()

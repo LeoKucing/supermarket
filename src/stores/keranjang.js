@@ -12,7 +12,7 @@ export const useKeranjangStore = defineStore('keranjang', {
       const total = this.items.reduce((acc, item) => acc + item.harga, 0)
       const tanggal = new Date().toISOString().split('T')[0]
 
-      await fetch('http://localhost:3000/transaksi', {
+      await fetch('https://melodious-bravery-production.up.railway.app/api/transaksi', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({

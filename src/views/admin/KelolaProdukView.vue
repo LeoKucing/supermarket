@@ -33,7 +33,7 @@ onMounted(() => {
 
 // Fungsi ambil produk dari json-server
 async function loadProduk() {
-  const res = await fetch('http://localhost:3000/produk')
+  const res = await fetch('https://melodious-bravery-production.up.railway.app/api/produk')
   produk.value = await res.json()
 }
 
@@ -44,7 +44,7 @@ async function tambahProduk() {
     return
   }
 
-  await fetch('http://localhost:3000/produk', {
+  await fetch('https://melodious-bravery-production.up.railway.app/api/produk', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
@@ -60,7 +60,7 @@ async function tambahProduk() {
 
 // Fungsi hapus produk
 async function hapusProduk(id) {
-  await fetch(`http://localhost:3000/produk/${id}`, {
+  await fetch(`https://melodious-bravery-production.up.railway.app/api/produk/${id}`, {
     method: 'DELETE'
   })
   loadProduk() // refresh daftar produk

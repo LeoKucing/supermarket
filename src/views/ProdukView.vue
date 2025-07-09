@@ -16,7 +16,7 @@ import ProductCard from '@/components/ProductCard.vue'
 const produk = ref([])
 
 onMounted(async () => {
-  const res = await fetch('http://localhost:3000/produk')
+  const res = await fetch('https://melodious-bravery-production.up.railway.app/api/produk')
   produk.value = await res.json()
 })
 </script>

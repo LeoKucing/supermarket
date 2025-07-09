@@ -18,12 +18,12 @@ import AdminNavbar from '@/components/AdminNavbar.vue'
 const transaksi = ref([])
 
 async function loadRiwayat() {
-  const res = await fetch('http://localhost:3000/transaksi')
+  const res = await fetch('https://melodious-bravery-production.up.railway.app/api/transaksi')
   transaksi.value = await res.json()
 }
 
 async function hapusTransaksi(id) {
-  await fetch(`http://localhost:3000/transaksi/${id}`, {
+  await fetch(`https://melodious-bravery-production.up.railway.app/api/transaksi/${id}`, {
     method: 'DELETE'
   })
   loadRiwayat()
